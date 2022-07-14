@@ -29,7 +29,8 @@ const styles = {
   articleText: `font-mediumSerif text-[1.4rem] text-[#292929]`,
 };
 
-const ArticleMain = () => {
+const ArticleMain = ({ post, author }) => {
+  console.log(post, author, '🍪');
   return (
     <div className={styles.wrapper}>
       <div className={styles.content}>
@@ -45,9 +46,15 @@ const ArticleMain = () => {
               />
             </div>
             <div className={styles.column}>
-              <div>Jin Wang</div>
+              <div>{author?.data?.name}</div>
               <div className={styles.postDetails}>
-                <span>Jun 15・ 7 min read・ </span>
+                <span>
+                  {new Date(post.data?.postedOn).toLocaleString('en-US', {
+                    day: 'numeric',
+                    month: 'short',
+                  })}
+                  ・ {post.data?.postLength} min read・{' '}
+                </span>
                 <span className={styles.listenButton}>
                   <AiFillPlayCircle />
                   Listen
@@ -76,14 +83,19 @@ const ArticleMain = () => {
               alt='banner'
             />
           </div>
-          <h1 className={styles.title}>
-            7 free tools that will make u more productive
-          </h1>
+          <h1 className={styles.title}>{post?.data?.title}</h1>
           <h4 className={styles.subtitle}>
-            <div>Jin Wang, June 15, 2022</div>
-            <div>Brief: Productivity is a skill that can be learned.</div>
+            <div>
+              {author?.data?.name},{' '}
+              {new Date(post.data?.postedOn).toLocaleDateString('en-US', {
+                day: 'numeric',
+                month: 'short',
+                year: 'numeric',
+              })}
+            </div>
+            <div>{post?.data?.brief}</div>
           </h4>
-          <div className={styles.articleText}>I love that</div>
+          <div className={styles.articleText}>{post?.data?.body}</div>
         </div>
       </div>
     </div>
