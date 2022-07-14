@@ -1,4 +1,6 @@
 import { Header, Banner, PostCard } from '../components';
+import { MediumContext } from '../context/MediumContext';
+import { useContext } from 'react';
 
 const styles = {
   wrapper: `mx-auto`,
@@ -8,6 +10,8 @@ const styles = {
 };
 
 export default function Home() {
+  const { posts } = useContext(MediumContext);
+  console.log(posts, '🔥');
   return (
     <div className={styles.wrapper}>
       <Header />

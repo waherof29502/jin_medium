@@ -11,8 +11,9 @@ const MediumProvider = ({ children }) => {
     const getUsers = async () => {
       const querySnapshot = await getDocs(collection(db, 'users'));
 
-      querySnapshot.docs.map((doc) => console.log(doc));
+      querySnapshot.docs.map((doc) => console.log(doc.data()));
     };
+    getUsers();
   }, []);
 
   return (
