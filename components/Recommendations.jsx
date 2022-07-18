@@ -3,7 +3,6 @@ import { useContext } from 'react';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { MdMarkEmailUnread } from 'react-icons/md';
 import ReplitLogo from '../static/replit.png';
-import TutorialImg from '../static/tutorial.jpg';
 
 import Jin from '../static/jin.gif';
 import JSLogo from '../static/jsLogo.png';
@@ -111,7 +110,7 @@ const recommendedPosts = [
   },
   {
     title: 'What can you do with Replit?',
-    image: TutorialImg,
+    image: JSLogo,
     author: {
       name: 'Jin Wang',
       image: Jin,

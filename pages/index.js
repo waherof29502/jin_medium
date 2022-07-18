@@ -1,6 +1,7 @@
 import { Header, Banner, PostCard } from '../components';
 import { MediumContext } from '../context/MediumContext';
 import { useContext } from 'react';
+import Head from 'next/head';
 
 const styles = {
   wrapper: `mx-auto`,
@@ -13,18 +14,24 @@ export default function Home() {
   const { posts } = useContext(MediumContext);
   console.log(posts, '🔥');
   return (
-    <div className={styles.wrapper}>
-      <Header />
-      <Banner />
-      <div className={styles.main}>
-        <div className={styles.container}>
-          <div className={styles.postsList}>
-            {posts.map((post) => (
-              <PostCard post={post} key={post.id} />
-            ))}
+    <div>
+      <Head>
+        <title>Medium |Jin Wang Dev</title>
+        <link rel='icon' href='/jindev01.png' />
+      </Head>
+      <main className={styles.wrapper}>
+        <Header />
+        <Banner />
+        <div className={styles.main}>
+          <div className={styles.container}>
+            <div className={styles.postsList}>
+              {posts.map((post) => (
+                <PostCard post={post} key={post.id} />
+              ))}
+            </div>
           </div>
         </div>
-      </div>
+      </main>
     </div>
   );
 }
