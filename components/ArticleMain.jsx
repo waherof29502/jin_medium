@@ -1,7 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import Jin from '../static/jin.gif';
-import Banner from '../static/banner.png';
+
 import { AiFillPlayCircle } from 'react-icons/ai';
 import { IoLogoTwitter } from 'react-icons/io';
 import { FaFacebook } from 'react-icons/fa';
@@ -30,7 +29,7 @@ const styles = {
 };
 
 const ArticleMain = ({ post, author }) => {
-  console.log(post, author, '🍪');
+  // console.log(post, author, '🍪');
   return (
     <div className={styles.wrapper}>
       <div className={styles.content}>
@@ -39,7 +38,7 @@ const ArticleMain = ({ post, author }) => {
             <div className={styles.authorProfileImageContainer}>
               <Image
                 className={`object-cover`}
-                src={Jin}
+                src={`jin.gif`}
                 alt='jin_logo'
                 width={100}
                 height={100}
@@ -76,7 +75,7 @@ const ArticleMain = ({ post, author }) => {
         <div className={styles.articleMainContainer}>
           <div className={styles.bannerContainer}>
             <Image
-              src={Banner}
+              src={`banner.png`}
               height={100}
               width={100}
               className={styles.image}

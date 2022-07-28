@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Logo from '../static/logo.png';
+import Logo from '../public/logo.png';
 import { useContext } from 'react';
 import { MediumContext } from '../context/MediumContext';
 import Modal from 'react-modal';
@@ -43,10 +43,10 @@ const Header = () => {
         <div className={styles.logoContainer}>
           <Image
             className={styles.logo}
-            src={Logo}
+            src={`medium/logo.png`}
             height={40}
             width={200}
-            alt='logo'
+            alt='headerlogo'
           />
         </div>
         {currentUser ? (

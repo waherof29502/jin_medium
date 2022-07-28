@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import Logo from './../static/banner.png';
+import Logo from '../public/banner.png';
 
 const styles = {
   wrapper: `h-max-[10rem] flex items-center justify-center bg-[#fcc017] border-y border-black`,
@@ -22,7 +22,7 @@ const Banner = () => {
 
         <Image
           className='hidden h-32 md:inline-flex object-contain flex-1'
-          src={Logo.src}
+          src={`banner.png`}
           width={500}
           height={400}
           alt='logo'

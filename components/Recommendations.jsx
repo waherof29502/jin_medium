@@ -2,10 +2,10 @@ import Image from 'next/image';
 import { useContext } from 'react';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { MdMarkEmailUnread } from 'react-icons/md';
-import ReplitLogo from '../static/replit.png';
+import ReplitLogo from '../public/replit.png';
 
-import Jin from '../static/jin.gif';
-import JSLogo from '../static/jsLogo.png';
+import Jin from '../public/jin.gif';
+import JSLogo from '../public/jsLogo.png';
 
 const styles = {
   wrapper: `h-screen min-w-[10rem] max-w-[30rem] flex-[1.2] p-[2rem]`,
@@ -46,7 +46,7 @@ const Recommendations = ({ author }) => {
 
       <div className={styles.authorContainer}>
         <div className={styles.authorProfileImageContainer}>
-          <Image src={Jin} width={100} height={100} alt='jin' />
+          <Image src={`jin.gif`} width={100} height={100} alt='jin' />
         </div>
         <div className={styles.authorName}>Jin Wang</div>
         <div className={styles.authorFollowing}>1M Follower</div>
@@ -102,26 +102,26 @@ export default Recommendations;
 const recommendedPosts = [
   {
     title: 'What can you do with Replit?',
-    image: ReplitLogo,
+    image: `jin.gif`,
     author: {
       name: 'Jin Wang',
-      image: Jin,
+      image: `jin.gif`,
     },
   },
   {
     title: 'What can you do with Replit?',
-    image: JSLogo,
+    image: `jin.gif`,
     author: {
       name: 'Jin Wang',
-      image: Jin,
+      image: `jin.gif`,
     },
   },
   {
     title: 'What can you do with Replit?',
-    image: JSLogo,
+    image: `jin.gif`,
     author: {
       name: 'Jin Wang',
-      image: Jin,
+      image: `jin.gif`,
     },
   },
 ];
